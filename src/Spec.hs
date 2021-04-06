@@ -6,6 +6,6 @@ import Test.Hspec
 correrTests :: IO ()
 correrTests = hspec $ do
   describe "Test de ejemplo" $ do
-    it "El pdepreludat se instaló correctamente" $ do
+    it "El doble de un número es el número más si mismo" $ do
       doble 1 `shouldBe` 2
 
