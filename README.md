@@ -33,7 +33,7 @@ Lo que vamos a usar para literalmente escribir el código, para Haskell hay vari
 
 Dejo un link a una guía ya escrita para otro curso que está muy bien explicada: https://github.com/pdep-utn/enunciados-miercoles-noche/blob/master/pages/haskell/entorno.md#editor-de-texto
 
-Si van a usar Visual Studio Code asegurense de instalar el plugin `Simple GHC (Haskell) Integration` como está explicado en esa guía, va a hacer que sea mucho más feliz trabajar en Haskell.
+Si van a usar Visual Studio Code asegurense de instalar el plugin `Haskell` (https://marketplace.visualstudio.com/items?itemName=haskell.haskell), va a hacer que sea mucho más feliz programar en el lenguaje.
 
 ## Ya descargué todo, ¿y ahora qué?
 
@@ -68,21 +68,17 @@ Como aun no tenemos Haskell instalado, en este paso Stack va a descargar la vers
    El doble de un número es el número más si mismo
    ```
 
-8. Abrir el proyecto con Visual Studio Code y validar que el plugin `Simple GHC` se haya instalado correctamente:
-Desde visual studio code, abren la carpeta del ejercicio y van a `src/Library.hs`, si poniendo el cursor sobre "numero" y ven que aparece `:: Number` al final de la línea, significa que el plugin está funcionando :D.
-
-![Al pasar el mouse sobre numero, se ve el tipo del mismo, que es Number](https://i.imgur.com/PQzZyyv.gif)
+8. Abrir el proyecto con Visual Studio Code y validar que el plugin `Haskell` se haya instalado correctamente:
+Desde visual studio code, abren la carpeta del ejercicio y van a `src/Library.hs`, si poniendo el cursor sobre "numero" les aparece un cartel que dice `Number`, significa que el plugin está funcionando :D.
 
 9. Si llegaste hasta acá, ¡bien!, ya tenes todo instalado correctamente, manda un mail al docente avisando así nos enteramos cuantos pudieron instalar las cosas sin problemas.
 
 A partir de acá, si querés jugar un poco con Haskell podés:
 
 - Abrir el interprete para probar cosas corriendo este comando (estando ubicado en la carpeta del proyecto): `stack ghci`
-  ![Algunos ejemplos en ghci: 2 + 2 retorna 4, "hello" ++ "!" retorna "hello!"](https://i.imgur.com/43CPlAm.png)
 
-- Escribir nuevo código en `src/Library.hs` y probarlo con tests que se escriben en `test/Spec.hs`
-  ![Agregado un test en test/Spec.hs que dice que el cuadruple de un numero es el doble de su doble, y testeado que 4 `shouldBe` 1. Corrido el test con `stack test` (que falla), luego definida una función en src/Library.hs que hace pasar ese test, la definición es `cuadruple numero = doble (doble numero)`. Tras haber hecho eso, se corren de nuevo los tests, que esta vez pasan.](https://i.imgur.com/8nbJ7RO.gif)
-  
+- Escribir nuevo código en `src/Library.hs` y probarlo con tests que se escriben en `src/Spec.hs`
+
 ## Nota: ¿Por qué estamos usando Stack? ¿Qué es `import PdePreludat`?
 
 Estamos usando Stack porque permite hacer algunas cosas que serían más difíciles de hacer con Haskell "pelado" como por ejemplo:
